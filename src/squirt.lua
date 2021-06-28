@@ -22,12 +22,17 @@ squirt.template = {
 }
 
 local route = require("squirt.route")
+local database = require("squirt.database")
 local turbo = require("turbo")
 
 function squirt.Application()
 	local application = {}
 		application.routes = {}	
 	
+	function application:database(filename)
+		return database:new(filename)		
+	end
+
 	function application:route(path)
 		return route:new(self, path)
 	end
