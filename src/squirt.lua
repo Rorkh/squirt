@@ -22,7 +22,7 @@ squirt.template = {
 }
 
 local route = require("squirt.route")
-local database = require("squirt.database")
+local database = require("chameleon")
 local turbo = require("turbo")
 
 function squirt.Application()

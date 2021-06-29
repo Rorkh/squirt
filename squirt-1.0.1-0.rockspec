@@ -1,5 +1,5 @@
 package = "squirt"
-version = "1.0.0-0"
+version = "1.0.0-1"
 source = {
 	url = "git+https://github.com/Rorkh/squirt"
 }
@@ -11,6 +11,7 @@ description = {
 dependencies = {
 	"turbo >= 2.1",
 	"aspect >= 2.2-0",
+	"chameleon >= 1.0.0-0"
 }
 build = {
 	type = "builtin",
