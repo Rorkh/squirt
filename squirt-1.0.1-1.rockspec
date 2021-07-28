@@ -1,5 +1,5 @@
 package = "squirt"
-version = "1.0.1-0"
+version = "1.0.1-1"
 source = {
 	url = "git+https://github.com/Rorkh/squirt"
 }
@@ -16,6 +16,7 @@ dependencies = {
 build = {
 	type = "builtin",
 	modules = {
-		["squirt"] = "src/squirt.lua"
+		["squirt"] = "src/squirt.lua",
+		["squirt.route"] = "src/squirt/route.lua"
 	}
 }
