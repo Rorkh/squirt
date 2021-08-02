@@ -22,7 +22,7 @@ squirt.template = {
 }
 
 local route = require("squirt.route")
-local database = require("chameleon")
+local database = pcall(require, "chameleon") and require("chameleon")
 local turbo = require("turbo")
 
 function squirt.Application()
@@ -30,6 +30,7 @@ function squirt.Application()
 		application.routes = {}	
 	
 	function application:database(filename)
+		if not database then error("Database backend wasn't founded.") end
 		return database:new(filename)		
 	end
 
